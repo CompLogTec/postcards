@@ -2,14 +2,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const contato = params.get('contato') || 'Reijane';
 
-  fetch('postcards.json')
-    .then(response => response.json())
+  fetch('./postcards.json')
+      .then(response => {
+      console.log('Response:', response);
+      return response.json();
+    })
     .then(data => {
       const person = data[contato];
       if (!person) {
         document.getElementById('loading').innerText = 'Contato não encontrado.';
         return;
       }
+
+      console.log(person)
 
       // Atualiza DOM com dados do JSON
       document.getElementById('nome').innerText = person.nome;

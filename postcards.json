@@ -7,13 +7,14 @@
     "ddd": "21",
     "email": "croberto.freire@complog.com.br"
   },
- "Kathelly": {
- "nome": "Kathelly Cesar",
- "cargo": "Comercial",
- "whatsapp": "11964887673",
- "whatspp_number": "96488-7673",
- "email": "kathelly.cesar@complog.com.br"
- }, 
+  "Kathelly": {
+    "nome": "Kathelly Cesar",
+    "cargo": "Comercial",
+    "whatsapp": "11964887673",
+    "whatsapp_number": "96488-7673",
+    "ddd": "11",
+    "email": "kathelly.cesar@complog.com.br"
+  },
   "Marcelo": {
     "nome": "Marcelo Medeiros",
     "cargo": "CFO",
