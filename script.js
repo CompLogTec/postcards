@@ -1,29 +1,33 @@
-function getParam(param) {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get(param);
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const contato = params.get('contato') || 'Reijane';
 
-const contato = getParam("contato") || "Reijane";
-const loadingDiv = document.getElementById("loading");
-const contentDiv = document.getElementById("content");
+  fetch('postcards.json')
+    .then(response => response.json())
+    .then(data => {
+      const person = data[contato];
+      if (!person) {
+        document.getElementById('loading').innerText = 'Contato não encontrado.';
+        return;
+      }
 
-fetch("./postcards.json")
-  .then(response => response.json())
-  .then(data => {
-    const info = data[contato];
-    if (info) {
-      document.getElementById("nome").innerText = info.nome;
-      document.getElementById("cargo").innerText = info.cargo;
-      document.getElementById("whatsapp").innerHTML = `<a href="https://wa.me/55${info.whatsapp}" target="_blank">(11) ${info.whatsapp_number}</a>`;
-      document.getElementById("email").innerHTML = `<a href="mailto:${info.email}">${info.email}</a>`;
-      
-      loadingDiv.style.display = "none";
-      contentDiv.classList.remove("hidden");
-    } else {
-      loadingDiv.innerText = "Contato não encontrado.";
-    }
-  })
-  .catch(error => {
-    console.error("Erro ao carregar JSON:", error);
-    loadingDiv.innerText = "Erro ao carregar os dados.";
-  });
+      // Atualiza DOM com dados do JSON
+      document.getElementById('nome').innerText = person.nome;
+      document.getElementById('cargo').innerText = person.cargo;
+
+      // Usa o ddd do JSON diretamente
+      document.getElementById('whatsapp').innerText = `(${person.ddd}) ${person.whatsapp_number}`;
+      document.getElementById('email').innerText = person.email;
+
+      // Atualiza botão de importar
+      const importLink = document.getElementById('importar');
+      importLink.href = `/api/gerar-vcf?nome=${encodeURIComponent(person.nome)}&telefone=${encodeURIComponent(person.whatsapp)}&email=${encodeURIComponent(person.email)}&cargo=${encodeURIComponent(person.cargo)}`;
+
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('content').classList.remove('hidden');
+    })
+    .catch(err => {
+      console.error(err);
+      document.getElementById('loading').innerText = 'Erro ao carregar.';
+    });
+});

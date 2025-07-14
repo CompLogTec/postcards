@@ -2,22 +2,24 @@
   "Carlos": {
     "nome": "Carlos Roberto Freire",
     "cargo": "CEO",
-    "whatsapp": "11918405302",
-    "whatsapp_number": "91840-5302",
+    "whatsapp": "21964479545",
+    "whatsapp_number": "96447-9545",
+    "ddd": "21",
     "email": "croberto.freire@complog.com.br"
   },
-  "Kathelly": {
-    "nome": "Kathelly Cesar",
-    "cargo": "Comercial",
-    "whatsapp": "11964887673",
-    "whatspp_number": "96488-7673",
-    "email": "kathelly.cesar@complog.com.br"
-  },
+ "Kathelly": {
+ "nome": "Kathelly Cesar",
+ "cargo": "Comercial",
+ "whatsapp": "11964887673",
+ "whatspp_number": "96488-7673",
+ "email": "kathelly.cesar@complog.com.br"
+ }, 
   "Marcelo": {
     "nome": "Marcelo Medeiros",
     "cargo": "CFO",
     "whatsapp": "11914448551",
     "whatsapp_number": "91444-8551",
+    "ddd": "11",
     "email": "marcelo.medeiros@complog.com.br"
   },
   "Reijane": {
@@ -25,6 +27,7 @@
     "cargo": "Coordenadora SAC/Backoffice",
     "whatsapp": "11984742403",
     "whatsapp_number": "98474-2403",
+    "ddd": "11",
     "email": "reijane.domingo@complog.com.br"
   },
   "Rodrigo": {
@@ -32,6 +35,7 @@
     "cargo": "CIO",
     "whatsapp": "11987356382",
     "whatsapp_number": "98735-6382",
+    "ddd": "11",
     "email": "rodrigo.souza@complog.com.br"
   },
   "Rosely": {
@@ -39,6 +43,7 @@
     "cargo": "Customer Relationship Management",
     "whatsapp": "11953064828",
     "whatsapp_number": "95306-4828",
+    "ddd": "11",
     "email": "rosely.silva@complog.com.br"
   }
 }

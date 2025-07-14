@@ -1,33 +1,46 @@
-body {
+body, html {
   margin: 0;
   padding: 0;
+  height: 100%;
   font-family: 'Poppins', sans-serif;
   background: black url('bg-complog.jpeg') no-repeat center center;
   background-size: contain;
   color: white;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .container {
-  text-align: center;
-  max-width: 600px;
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: left;
 }
 
-h1 {
+#loading {
+  font-size: 18px;
+}
+
+#content.hidden {
+  display: none;
+}
+
+#content {
+  margin-top: 100px;
+}
+
+.bold {
   font-weight: 700;
-  font-size: 3em;
-  text-align: left;
+}
+
+.large {
+  font-size: 35px;
 }
 
 .info {
   display: flex;
   align-items: center;
-  justify-content: start;
-  gap: 40px;
+  gap: 8px;
+  margin: 10px 0;
 }
 
 .info i {
@@ -36,14 +49,22 @@ h1 {
 
 a {
   color: white;
+  text-decoration: none;
+}
+
+a:hover {
   text-decoration: underline;
 }
 
-.hidden {
-  display: none;
+.button-container {
+  margin-top: 40px;
 }
 
-#cargo {
-  text-align: left;
-  font-weight: 900;
+.import-button {
+  background: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: center;
+  display: in/ine-block;
 }
