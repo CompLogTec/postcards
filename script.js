@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-document.getElementById('importar').addEventListener('click', function(e) {
+document.getElementById('importar').addEventListener('click', function (e) {
   e.preventDefault();
 
   // Simulação: pegue os dados do seu JSON carregado
