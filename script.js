@@ -21,10 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById('whatsapp').innerText = `(${person.ddd}) ${person.whatsapp_number}`;
       document.getElementById('email').innerText = person.email;
 
-      // Atualiza botão de importar
-      const importLink = document.getElementById('importar');
-      importLink.href = `/api/gerar-vcf?nome=${encodeURIComponent(person.nome)}&telefone=${encodeURIComponent(person.whatsapp)}&email=${encodeURIComponent(person.email)}&cargo=${encodeURIComponent(person.cargo)}`;
-
       document.getElementById('loading').style.display = 'none';
       document.getElementById('content').classList.remove('hidden');
     })
@@ -32,4 +28,36 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error(err);
       document.getElementById('loading').innerText = 'Erro ao carregar.';
     });
+});
+
+document.getElementById('importar').addEventListener('click', function(e) {
+  e.preventDefault();
+
+  // Simulação: pegue os dados do seu JSON carregado
+  const nome = document.getElementById('nome').innerText;
+  const cargo = document.getElementById('cargo').innerText;
+  const whatsapp = document.getElementById('whatsapp').innerText;
+  const email = document.getElementById('email').innerText;
+
+  const vcf = `
+BEGIN:VCARD
+VERSION:3.0
+N:${nome};;;;
+FN:${nome}
+TITLE:${cargo}
+TEL;TYPE=CELL:${whatsapp}
+EMAIL;TYPE=INTERNET:${email}
+END:VCARD
+  `.trim();
+
+  const blob = new Blob([vcf], { type: 'text/vcard' });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `${nome}.vcf`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
 });
