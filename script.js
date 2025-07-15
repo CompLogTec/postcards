@@ -44,6 +44,7 @@ BEGIN:VCARD
 VERSION:3.0
 N:${nome};;;;
 FN:${nome}
+ORG:Complog Tecnologia E-commerce
 TITLE:${cargo}
 TEL;TYPE=CELL:${whatsapp}
 EMAIL;TYPE=INTERNET:${email}
