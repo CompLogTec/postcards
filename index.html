@@ -1,68 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Postcard Complog</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
 
-  <!-- Google Fonts -->
+  <!-- Font Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+  <link rel="stylesheet" href="style.css?v=1.1.33" />
+  <script src="script.js" defer></script>
 </head>
 
 <body>
   <div class="container">
     <div id="loading">Carregando...</div>
-
     <div id="content" class="hidden">
-      <p id="nome" class="bold large"></p>
+      <h1 id="nome"></h1>
       <p id="cargo"></p>
 
-      <div class="info">
-        <i class="fa-brands fa-whatsapp"></i>
-        <p id="whatsapp"></p>
-      </div>
+      <div class="teste">
+        <div class="info">
+          <i class="fa-brands fa-whatsapp"></i>
+          <p id="whatsapp"></p>
+        </div>
 
-      <div class="info">
-        <i class="fa-solid fa-phone"></i>
-        <p>(11) 5200-3773</p>
-      </div>
+        <div class="info">
+          <i class="fa-solid fa-phone"></i>
+          <p>(11) 5200-3773</p>
+        </div>
 
-      <div class="info">
-        <i class="fa-solid fa-envelope"></i>
-        <p id="email"></p>
-      </div>
+        <div class="info">
+          <i class="fa-solid fa-envelope"></i>
+          <p id="email"></p>
+        </div>
 
-      <div class="info">
-        <i class="fa-solid fa-location-dot"></i>
-        <div>
-          <p>Alameda Mamoré, 503 13º andar</p>
-          <p>sala 134 - 06.454-000 - Alphaville</p>
-          <p>Barueri/SP</p>
+        <div class="info">
+          <i class="fa-solid fa-location-dot"></i>
+          <div lass="info address">
+            <p>Alameda Mamoré, 503 13º andar</p>
+            <p>sala 134 - 06.454-000 - Alphaville</p>
+            <p>Barueri/SP</p>
+          </div>
+        </div>
+
+        <div class="info">
+          <i class="fa-solid fa-globe"></i>
+          <a href="http://www.complog.com.br" class="link" target="_blank">www.complog.com.br</a>
         </div>
       </div>
 
-      <div class="info">
-        <i class="fa-solid fa-globe"></i>
-        <a href="http://www.complog.com.br" target="_blank">www.complog.com.br</a>
-      </div>
-
-      <div class="button-container">
-        <a id="importar" href="#" download class="import-button">Importar Contato</a>
-      </div>
+      <a id="importar" href="#" class="importar">Importar Contato</a>
     </div>
   </div>
 </body>
+
 </html>

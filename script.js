@@ -3,10 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const contato = params.get('contato') || 'Reijane';
 
   fetch('./postcards.json')
-      .then(response => {
-      console.log('Response:', response);
-      return response.json();
-    })
+    .then(response => response.json())
     .then(data => {
       const person = data[contato];
       if (!person) {

@@ -1,70 +1,83 @@
-body, html {
+body {
   margin: 0;
-  padding: 0;
-  height: 100%;
   font-family: 'Poppins', sans-serif;
-  background: black url('bg-complog.jpeg') no-repeat center center;
+  background: url('./bg-complog.jpeg') no-repeat center center fixed;
   background-size: contain;
+  background-color: black;
   color: white;
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  text-align: left;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  width: 150px;
+  margin: 20px auto;
+  display: block;
 }
 
 #loading {
-  font-size: 18px;
+  margin-top: 50px;
 }
 
-#content.hidden {
+.hidden {
   display: none;
 }
 
-#content {
-  margin-top: 100px;
+h1 {
+  margin: 10px 0 0;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: left;
 }
 
-.bold {
-  font-weight: 700;
-}
-
-.large {
-  font-size: 35px;
+p {
+  margin: 1px 0;
+  text-align: left;
 }
 
 .info {
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: start;
   margin: 10px 0;
+  gap: 10px;
+}
+
+.info.address {
+  flex-direction: column;
+  gap: 0;
 }
 
 .info i {
-  font-size: 30px;
+  font-size: 18px;
 }
 
-a {
-  color: white;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.button-container {
-  margin-top: 40px;
-}
-
-.import-button {
+.importar {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
   background: white;
   color: black;
-  padding: 10px 20px;
   border-radius: 8px;
-  text-align: center;
-  display: in/ine-block;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#content {
+  margin-top: 176px;
+}
+
+.teste {
+  margin-top: 25px;
+}
+
+
+.link {
+  text-decoration: none;
+  color: white;
 }
