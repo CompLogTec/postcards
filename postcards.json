@@ -54,5 +54,13 @@
     "whatsapp_number": "97496-5914",
     "ddd": "21",
     "email": "henrique.rebuzzi@complog.com.br"
+  },
+  "Comercial": {
+    "nome": "Comercial Complog",
+    "cargo": "Comercial",
+    "whatsapp": "11964887673",
+    "whatsapp_number": "96488-7673",
+    "ddd": "11",
+    "email": ""
   }
 }
