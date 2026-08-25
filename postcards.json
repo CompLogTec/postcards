@@ -9,19 +9,11 @@
   },
   "Cristianne": {
     "nome": "Cristianne Freudenfeld",
-    "cargo": "Head de Expansão e Novos Negócios",
-    "whatsapp": "21964902303",
-    "whatsapp_number": "96490-2303",
-    "ddd": "21",
-    "email": "crisfreud@complog.com.br"
-  },
-  "Marcelo": {
-    "nome": "Marcelo Medeiros",
-    "cargo": "CFO",
-    "whatsapp": "11914448551",
-    "whatsapp_number": "91444-8551",
+    "cargo": "Diretora Comercial",
+    "whatsapp": "11964887673",
+    "whatsapp_number": "96488-7673",
     "ddd": "11",
-    "email": "marcelo.medeiros@complog.com.br"
+    "email": "crisfreud@complog.com.br"
   },
   "Reijane": {
     "nome": "Reijane Domingo",
@@ -46,5 +38,21 @@
     "whatsapp_number": "95306-4828",
     "ddd": "11",
     "email": "rosely.silva@complog.com.br"
+  },
+  "Willians": {
+    "nome": "Willians Freire",
+    "cargo": "Gestor de Dados",
+    "whatsapp": "11985482549",
+    "whatsapp_number": "98548-2549",
+    "ddd": "11",
+    "email": "willians.freire@complog.com.br"
+  },
+  "Henrique": {
+    "nome": "Henrique Rebuzzi",
+    "cargo": "Vendedor",
+    "whatsapp": "21974965914",
+    "whatsapp_number": "97496-5914",
+    "ddd": "21",
+    "email": "henrique.rebuzzi@complog.com.br"
   }
 }
